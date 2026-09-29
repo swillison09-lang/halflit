@@ -22,15 +22,13 @@ button:focus-visible{outline:3px solid var(--blue2);outline-offset:3px}
 <main class="card">
   <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#3b82f6"/><path d="M32 12.5c-11.3 0-20.5 7.6-20.5 17.3 0 5.3 2.7 10 7 13.2l-2.3 8.5 9.3-4.8c2 .6 4.2.9 6.5.9 11.3 0 20.5-7.7 20.5-17.8 0-9.7-9.2-17.3-20.5-17.3z" fill="#fff"/><path d="M38.6 23.6c-1.5-1.5-3.9-2.4-6.6-2.4-3.9 0-6.5 1.9-6.5 4.6 0 6.2 13.6 3.3 13.6 9.6 0 3-2.9 5.1-7.1 5.1-2.9 0-5.6-1-7.3-2.9" fill="none" stroke="#3b82f6" stroke-width="4.4" stroke-linecap="round"/></svg>
   <h1>Sean<b>Chat</b></h1>
-  <p>Snaps, chats, stories and calls with your friends. Log in with your HALFLIT account.</p>
-  <button id="open" type="button">Open SeanChat</button>
-  <p class="small">For ages 13 and up. Friends only. <a id="alt" href="seanchat/" target="_blank" rel="noopener">Open in a new tab</a></p>
+  <p><b style="color:#69a4ff">Down for maintenance.</b> We're adding new stuff. SeanChat will be back soon, and your friends, chats and streaks are safe.</p>
 </main>
 <script>
 // SeanChat needs the camera and microphone, which embedded pages (like the HALFLIT Google Site) block,
 // so it opens in its own phone-sized window.
 var URL_ = new URL('seanchat/', location.href).href;
-document.getElementById('open').onclick = function () {
+var _b = document.getElementById('open'); if (_b) _b.onclick = function () {
   var h = Math.min(900, (screen.availHeight || 900) - 40), w = Math.min(460, Math.round(h * 0.52));
   var win = window.open(URL_, 'seanchat', 'popup,width=' + w + ',height=' + h + ',left=' + Math.max(0, ((screen.availWidth || 1366) - w) / 2) + ',top=10');
   if (!win) window.open(URL_, '_blank');
